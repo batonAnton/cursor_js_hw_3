@@ -127,7 +127,7 @@ document.writeln(`100 доларів в гривнях  буде - ${convertCurr
   let result = '';
     
       for(let i = 0; i < arg; i++){
-        result +=(Math.random() * 10).toFixed();
+        result +=(Math.random() * 5).toFixed();
       }
       return result;
       
