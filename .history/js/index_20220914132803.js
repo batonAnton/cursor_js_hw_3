@@ -64,23 +64,36 @@ document.writeln(` <br> Функція 5... Випадкове число ${rand
 
 // 6 task 
 
+function repeatLetter( str )
+{
+  
+  for( let i = 0 ;i < str.length ;i++)
+  {
+    let count = 0;
+    for( let j = 0 ;j < str.length ;j++)
+    {
+      if( str[i] == str[j] && i > j  )
+      {
+       break;
+      }
+      if( str[i] == str[j]  )
+      {
+        count++;
+      }
+    }
+    if( count > 0)
+    
+    // console.log(`${str[i].toUpperCase()} повторюється  ${count} рази`);
+document.writeln(` <br> Функція 6... У слові ${test_str} ${str[i].toUpperCase()} повторюється  ${count} рази `);
 
-function countLetters (word, letter) {
-  let counter = 0;
-
-  for(let i = 0; i < word.length; i++) {
-    if (word.charAt(i) == letter) {
-      counter+=1;
-    } 
   }
-  return counter;
+ 
 }
+ 
 
-const test_str = prompt("Введіть слово для перевірки літер "); 
-const checkLetter = prompt("Введіть літеру яку потрібно обчислити ");
-countLetters(test_str,checkLetter);
-
-document.writeln(` <br> Функія 6...У слові ${test_str}     -   ${countLetters(test_str,checkLetter)} ${checkLetter} `);
+let test_str = "укулеле";
+console.log("У слові " + " " + test_str + " " + "слова повторюються :");
+repeatLetter( test_str);
 
 
 
@@ -104,9 +117,9 @@ function convertCurrency (typeValue){
 
 let typeValue="1000 UAH";
 
-document.writeln(`<br> Функція №7: 1000 гривень в доларах буде - ${convertCurrency(typeValue)}....`); 
+document.writeln(`Функція №7: 1000 гривень в доларах буде - ${convertCurrency(typeValue)}....`); 
 typeValue = "100$";
-document.writeln(`.... 100 доларів в гривнях  буде - ${convertCurrency(typeValue)} `);
+document.writeln(`100 доларів в гривнях  буде - ${convertCurrency(typeValue)} `);
 
 // 9 task
  function getRandomPassword(arg,arg2){
@@ -152,12 +165,21 @@ function isPalindrom(checkWord){
   for(i = 1; i - 1 < checkWord.length - i ; i++){
     if(checkWord[i-1] !== checkWord[checkWord.length-i])
     return false;
-  } 
-return true;
+  }
+  for(i = 1; i - 1 < checkWord2.length - i ; i++){
+    if(checkWord2[i-1] !== checkWord2[checkWord2.length-i])
+    return false;
+  }
 }
 
-let checkWord = prompt("введть слово для перевірки паліндрому");
+
+
+
+let checkWord = "окко";
+let checkWord2 = "пляшка";
+console.log(isPalindrom(checkWord));
 document.writeln(`<br>  паліндром слова ${checkWord} - ${isPalindrom(checkWord)}`);
+document.writeln(`<br>  паліндром слова ${checkWord2} - ${isPalindrom(checkWord2)}`);
 
 
 // task 10
@@ -179,3 +201,4 @@ let previousString = "'Бісквіт був дуже ніжним'";
 console.log(deleteDuplicateLetter(previousString));
 
 document.writeln(`<br>  Видалені букви ${deleteDuplicateLetter(previousString)} речення : ${previousString}`);
+

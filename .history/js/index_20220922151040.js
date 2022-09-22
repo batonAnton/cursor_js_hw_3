@@ -64,7 +64,44 @@ document.writeln(` <br> Функція 5... Випадкове число ${rand
 
 // 6 task 
 
+// function repeatLetter( str )
+// {
+  
+//   for( let i = 0 ;i < str.length ;i++)
+//   {
+//     let count = 0;
+//     for( let j = 0 ;j < str.length ;j++)
+//     {
+//       if( str[i] == str[j] && i > j  )
+//       {
+//        break;
+//       }
+//       if( str[i] == str[j]  )
+//       {
+//         count++;
+//       }
+//     }
+//     if( count > 0)
+    
+//     // console.log(`${str[i].toUpperCase()} повторюється  ${count} рази`);
+// document.writeln(` <br> Функція 6... У слові ${test_str} ${str[i].toUpperCase()} повторюється  ${count} рази `);
 
+//   }
+//   for(let i = 0; i<str.length; i++){
+//     let counter = 0;
+//     for( let j = 0 ;j < str.length ;j++)
+//     {
+//       if( str[i] == str[j] && i > j  )
+//       {
+//        break;
+//       }
+//   }
+// }
+// }
+// let checkLetter = "а";
+// let test_str = "асталавіста";
+// document.writeln('<br> Функія 6...У слові ${repeatLetter()}');
+// repeatLetter( test_str,checkLetter);
 function countLetters (word, letter) {
   let counter = 0;
 
@@ -76,11 +113,13 @@ function countLetters (word, letter) {
   return counter;
 }
 
-const test_str = prompt("Введіть слово для перевірки літер "); 
-const checkLetter = prompt("Введіть літеру яку потрібно обчислити ");
-countLetters(test_str,checkLetter);
+const test_str = prompt("Enter your string: "); 
+const checkLetter = prompt("Enter a letter to check: ");
 
-document.writeln(` <br> Функія 6...У слові ${test_str}     -   ${countLetters(test_str,checkLetter)} ${checkLetter} `);
+const result = countLetters (test_str, checkLetter);
+
+console.log("result is" + " " +  result);
+document.writeln('<br> Функія 6...У слові  ${countLetter()}');
 
 
 
@@ -154,10 +193,21 @@ function isPalindrom(checkWord){
     return false;
   } 
 return true;
+
+  for(i = 1; i - 1 < checkWord2.length - i ; i++){
+    if(checkWord2[i-1] !== checkWord2[checkWord2.length-i])
+    return false;
+  }return true;
 }
 
-let checkWord = prompt("введть слово для перевірки паліндрому");
+
+
+
+let checkWord = "окко";
+let checkWord2 = "пляшка";
+console.log(isPalindrom(checkWord));
 document.writeln(`<br>  паліндром слова ${checkWord} - ${isPalindrom(checkWord)}`);
+document.writeln(`<br>  паліндром слова ${checkWord2} - ${isPalindrom(checkWord2)}`);
 
 
 // task 10

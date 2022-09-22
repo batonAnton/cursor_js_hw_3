@@ -76,8 +76,8 @@ function countLetters (word, letter) {
   return counter;
 }
 
-const test_str = prompt("Введіть слово для перевірки літер "); 
-const checkLetter = prompt("Введіть літеру яку потрібно обчислити ");
+const test_str = prompt("Enter your string: "); 
+const checkLetter = prompt("Enter a letter to check: ");
 countLetters(test_str,checkLetter);
 
 document.writeln(` <br> Функія 6...У слові ${test_str}     -   ${countLetters(test_str,checkLetter)} ${checkLetter} `);
@@ -154,10 +154,15 @@ function isPalindrom(checkWord){
     return false;
   } 
 return true;
-}
 
-let checkWord = prompt("введть слово для перевірки паліндрому");
+  
+
+
+
+
+let checkWord = "окко";
 document.writeln(`<br>  паліндром слова ${checkWord} - ${isPalindrom(checkWord)}`);
+document.writeln(`<br>  паліндром слова ${checkWord2} - ${isPalindrom(checkWord2)}`);
 
 
 // task 10

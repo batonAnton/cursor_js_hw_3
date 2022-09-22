@@ -64,23 +64,39 @@ document.writeln(` <br> Функція 5... Випадкове число ${rand
 
 // 6 task 
 
+function repeatLetter( str )
+{
+  
+//   for( let i = 0 ;i < str.length ;i++)
+//   {
+//     let count = 0;
+//     for( let j = 0 ;j < str.length ;j++)
+//     {
+//       if( str[i] == str[j] && i > j  )
+//       {
+//        break;
+//       }
+//       if( str[i] == str[j]  )
+//       {
+//         count++;
+//       }
+//     }
+//     if( count > 0)
+    
+//     // console.log(`${str[i].toUpperCase()} повторюється  ${count} рази`);
+// document.writeln(` <br> Функція 6... У слові ${test_str} ${str[i].toUpperCase()} повторюється  ${count} рази `);
 
-function countLetters (word, letter) {
-  let counter = 0;
-
-  for(let i = 0; i < word.length; i++) {
-    if (word.charAt(i) == letter) {
-      counter+=1;
-    } 
+//   }
+  for(let i = 0; i<str.length; i++){
+    let counter = 0;
+    if(checkLetter[i] )
   }
-  return counter;
 }
-
-const test_str = prompt("Введіть слово для перевірки літер "); 
-const checkLetter = prompt("Введіть літеру яку потрібно обчислити ");
-countLetters(test_str,checkLetter);
-
-document.writeln(` <br> Функія 6...У слові ${test_str}     -   ${countLetters(test_str,checkLetter)} ${checkLetter} `);
+ 
+let checkLetter = "а";
+let test_str = "асталавіста";
+console.log("У слові " + " " + test_str + " " + "слова повторюються :");
+repeatLetter( test_str);
 
 
 
@@ -154,10 +170,21 @@ function isPalindrom(checkWord){
     return false;
   } 
 return true;
+
+  for(i = 1; i - 1 < checkWord2.length - i ; i++){
+    if(checkWord2[i-1] !== checkWord2[checkWord2.length-i])
+    return false;
+  }return true;
 }
 
-let checkWord = prompt("введть слово для перевірки паліндрому");
+
+
+
+let checkWord = "окко";
+let checkWord2 = "пляшка";
+console.log(isPalindrom(checkWord));
 document.writeln(`<br>  паліндром слова ${checkWord} - ${isPalindrom(checkWord)}`);
+document.writeln(`<br>  паліндром слова ${checkWord2} - ${isPalindrom(checkWord2)}`);
 
 
 // task 10
@@ -179,3 +206,4 @@ let previousString = "'Бісквіт був дуже ніжним'";
 console.log(deleteDuplicateLetter(previousString));
 
 document.writeln(`<br>  Видалені букви ${deleteDuplicateLetter(previousString)} речення : ${previousString}`);
+
